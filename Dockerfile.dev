@@ -30,10 +30,10 @@ RUN pip install --no-cache-dir \
     pytest-xdist
 
 # Copy requirements first to leverage Docker cache
-COPY requirements.txt .
+COPY dev-requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r dev-requirements.txt
 
 # Copy the package files
 COPY . .
